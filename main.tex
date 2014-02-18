@@ -1,0 +1,48 @@
+\include{preamble}
+
+% abstracton ==> http://www.komascript.de/node/847
+
+
+\include{hyphenations}
+\include{newcommands}
+%\include{testpreamble}
+
+% \PreviewMacro[{{}}]{\ce}
+
+\begin{document}
+\input{titlepage}
+\selectlanguage{english}
+
+\tableofcontents
+
+\selectlanguage{ngerman}
+\chapter{Zusammenfassung}
+%\input{zusammenfassung}
+\selectlanguage{english}
+
+\chapter{Introduction}
+%\input{introduction}
+
+\appendix
+\addpart{Appendix}
+
+\chapter{Sample}
+%\input{samples}
+
+%\nocite{*}
+\printbibliography%
+\selectlanguage{ngerman}
+\addchap{Erklärung}
+%\input{disclaimer}
+\selectlanguage{english}
+
+\chapter{Dank}
+%\input{dank}
+
+\end{document}
+ 
+
+%%%Local Variables: 
+%%%mode: latex
+%%%TeX-master: t
+%%%End: 

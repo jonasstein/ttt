@@ -1,0 +1,150 @@
+\documentclass[a4paper,fontsize=11pt, twoside, BCOR=8mm]{scrbook}
+%\documentclass[a4paper,fontsize=11pt, oneside, BCOR=8mm]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,ngerman]{babel} % switch with \selectlanguage{english}
+\usepackage[babel,german=quotes]{csquotes}
+
+%\usepackage{geometry}
+%\geometry{includehead,includefoot,inner=2.5cm,outer=3cm,top=2.5cm,bottom=2cm}
+
+\usepackage{datetime}
+\usepackage{amssymb} % ams packages
+\usepackage{amscd} % commutative diagrams with arrows Voß Mathematik p. 178
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+% \usepackage{ctable} %Voß S. 51
+
+
+% \usepackage[]{todonotes}
+% \usepackage{fixme}     % \fxfatal[draft]{bla bla}
+
+\usepackage[]{url} 
+
+%%% DO NOT USE: \usepackage{breakurl} % Package breakurl Warning: You are using breakurl while processing via pdflatex.
+\urlstyle{same}
+
+\usepackage{float} % for \begin{figure}[H]
+
+\usepackage[]{xcolor}
+\usepackage[]{graphicx} % use export TEXINPUTS= instead \graphicspath says l2tabu, but \graphicspath is very handy
+% \usepackage[demo]{graphicx} % demo = ignore pictures
+\graphicspath{{/home/stein/my/uni/thesis/gfx/}}
+
+% ref: http://tex.stackexchange.com/questions/83037/difference-between-ref-varioref-and-cleveref-decision-for-a-thesis
+\usepackage{varioref}
+\usepackage{hyperref} 
+
+\hypersetup{%
+  colorlinks=false,   % aktiviert farbige Referenzen
+  pdfpagemode=UseNone,  % PDF-Viewer startet ohne Inhaltsverzeichnis et.al.
+  pdfstartview=FitH, % PDF-Viewer benutzt beim Start bestimmte Seitenbreite
+  pdfauthor=Jonas Stein,%
+  pdftitle=Makroskopische und mikroskopische Untersuchungen an Multiferroika%
+}
+
+\usepackage{cleveref}
+
+% \RequirePackage[l2tabu, orthodox]{nag}
+
+
+\usepackage{siunitx}
+\sisetup{locale=UK, 
+  repeatunits=false, 
+  per=fraction,
+  separate-uncertainty = false} % 3.45(2)
+
+
+
+
+\usepackage[]{xspace} %    \xspace should be used at the end of a macro designed to be used mainly in text. It adds a space unless the macro is followed by certain punctuation characters.
+
+\usepackage[]{subfig}
+\usepackage[version=3, arrows=pgf, arrows=pgf-filled]{mhchem}
+
+\usepackage[]{rotating} % \begin{sideways} or \begin{turn}{30} or \begin{rotate}{30} or \begin{sidewaysfigure} or \begin{sidewaystable}
+
+
+\usepackage[]{miller} % \hkl(2 -0.28 1)
+\renewcommand\millerskip{\;} % more space between hkl
+
+% Tables =====================
+
+\usepackage[]{booktabs}
+% \usepackage[]{tablefootnote}
+\usepackage[]{longtable}
+
+
+\usepackage[]{pdfpages}
+
+\usepackage[%
+backend=biber,%
+style=alphabetic,%
+sorting=nyt,%
+doi=true,%
+isbn=true,%
+hyperref=true,%
+backref=true,%
+url=false]{biblatex}
+
+\AtEveryBibitem{\clearfield{issn}}
+\AtEveryCitekey{\clearfield{issn}}
+
+
+\setlength{\parindent}{0pt} % Einrückung
+\setlength{\parskip}{0.8em} % Absatz Abstand 
+
+
+\clubpenalty=10000
+\interfootnotelinepenalty=10000
+
+% Disable single lines at the end of a paragraph (Hurenkinder)
+\widowpenalty=10000%
+\displaywidowpenalty=10000%
+
+%\setlength{\headsep}{2.5em}
+%\setdefaultleftmargin{4em}{2em}{2em}{2em}{2em}{2em}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%% \usepackage[]{microtype} % enable later microtype makes compilation slow
+
+
+\usepackage[noindentafter]{titlesec}
+
+\usepackage[]{tikz}
+
+
+\usepackage[automark]{scrpage2}
+\pagestyle{scrheadings}
+\clearscrheadfoot%
+
+\setheadsepline[\textwidth]{1pt}{}
+\ohead{\headmark}
+\ofoot[\pagemark]{\pagemark}
+\cfoot{}
+\chead{}
+
+\usepackage[printonlyused]{acronym}
+
+\usepackage[]{comment} % multiline comments \begin{comment} \end{comment}
+
+\bibliography{../jabref/mf} 
+
+\usepackage{splitidx} 
+\makeindex % And we want index generation
+\newindex[Register of Persons]{person} %add person with \sindex[person]{Albert Einstein}
+
+%\usepackage{refcheck}
+
+
+%\usepackage{cleveref}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: "mf"
+%%% End: 
