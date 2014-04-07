@@ -31,7 +31,7 @@
 \usepackage[]{xcolor}
 \usepackage[]{graphicx} % use export TEXINPUTS= instead \graphicspath says l2tabu, but \graphicspath is very handy
 % \usepackage[demo]{graphicx} % demo = ignore pictures
-\graphicspath{{/home/stein/my/uni/thesis/gfx/}}
+\graphicspath{{../gfx/}}
 
 % ref: http://tex.stackexchange.com/questions/83037/difference-between-ref-varioref-and-cleveref-decision-for-a-thesis
 \usepackage{varioref}
@@ -132,7 +132,8 @@ url=false]{biblatex}
 
 \usepackage[]{comment} % multiline comments \begin{comment} \end{comment}
 
-\bibliography{../jabref/mf} 
+% put literature.bib here:
+\bibliography{../jabref/literature} 
 
 \usepackage{splitidx} 
 \makeindex % And we want index generation
